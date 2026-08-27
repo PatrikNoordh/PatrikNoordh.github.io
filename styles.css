@@ -1,0 +1,23 @@
+/* Patrik Noordh — portfolio
+   1. Custom properties  2. Reset  3. Base */
+
+:root {
+  --bg: #0b1020;
+  --text: #e8eaf2;
+  --dim: #8a90a8;
+  --violett: #a855f7;
+  --bla: #6d8bff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
