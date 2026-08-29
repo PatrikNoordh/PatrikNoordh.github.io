@@ -1,79 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patrik Noordh — Mobile Application Developer</title>
+    <meta
+      name="description"
+      content="Portfolio for Patrik Noordh, mobile developer for iOS and Android. Looking for an
+   internship in Gothenburg or distance."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patrik Noordh — Mobilutvecklare</title>
-  <meta name="description" content="Portfolio for Patrik Noordh, mobile developer for iOS and Android. Looking for an
-   internship in Gothenburg or distance.">
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <body>
+    <header>
+      <nav aria-label="Main navigation">
+        <p class="logo">Patrik Noordh</p>
 
-<body>
+        <button
+          class="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-  <header>
-
-  <nav aria-label="Main navigation">
-    
-    <p class="logo">Patrik Noordh</p>
-
-    <button class="menu-toggle" aria-lable="Open menu" aiea-expanded="false">
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-    </button>
-
-    <ul class="nav-links">
-      <li><a href="#apps">Apps</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#lia">LIA</a></li>
-      <li><a href="#contact">Contact</a></li>
-
-    </ul>
-     </nav>
+        <ul class="nav-links">
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#lia">LIA</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-      <main>
+    <main>
+      <section id="about" class="hero">
+        <p class="greeting">Hello, my name is</p>
+        <h1 class="name">Patrik Noordh</h1>
+        <p class="role">Mobile Application Developer</p>
 
-    <section id="about" class="hero">
+        <p class="tagline">
+          I create innovative mobile applications for iOS and Android platforms.
+          Ten years on construction sites before code.
+        </p>
 
-      <p class="greeting">Hello, my name is</p>
-      <h1 class="name">Patrik Noordh</h1>
-      <p class="role">Mobile Application Developer</p>
+        <div class="hero-buttons">
+          <a class="btn btn-filled" href="#apps">See my apps </a>
+          <a class="btn" href="#contact">Contact me</a>
+        </div>
+      </section>
 
-      <p class="tagline">I create innovative mobile applications for iOS and Android platforms.
-        Ten years on construction sites before code.
-      </p>
+      <section id="apps">
+        <div class="section-header">
+          <span class="pill">Selected projects</span>
 
-      <div class="hero-buttons">
-        <a class="btn btn-filled" href="#apps">See my apps </a>
-        <a class="btn" href="#contact">Contact me</a>
+          <h2>Apps I have built</h2>
 
-      </div>
-    </section>
+          <p>Three of five. All the code is open source on GitHub.</p>
+        </div>
 
-       <section id="apps">
-      <h2>Apps</h2>
-    </section>
+        <div class="apps-grid">
+          <article class="phone">
+            <div class="screen">
+              <p class="screen-title">daily_done</p>
+              <p class="screen-sub">12 days in a row</p>
 
-    <section id="lia">
-      <h2>LIA</h2>
-    </section>
+              <div class="row row-accent">Workout ✓</div>
+              <div class="row row-dark">Code 1 h ✓</div>
+              <div class="row row-idle">Read 20 min</div>
+              <div class="row row-idle">Walk</div>
+            </div>
 
-    <section id="contact">
-      <h2>Contact</h2>
-    </section>
+            <h3>daily_done</h3>
 
-  </main>
+            <p class="platform">iOS</p>
 
-  <footer>
-    <p>&copy; 2026 Patrik Noordh</p>
-  </footer>
+            <p class="app-text">
+              Habit tracking with streaks, heatmap statistics and location
+              logging.
+            </p>
 
-  <script src="script.js"></script>
-</body>
+            <ul class="tags">
+              <li>Swift</li>
+              <li>SwiftUI</li>
+              <li>Firebase</li>
+              <li>MVVM</li>
+            </ul>
 
+            <a class="app-link" href="https://github.com/PatNoO"
+              >See the code →</a
+            >
+          </article>
+
+          <article class="app-card">
+            <div class="phone">
+              <div class="screen">
+                <p class="screen-title">scene-it</p>
+                <p class="screen-sub">Question 4 of 10</p>
+                <div class="row row-question">
+                  Which series is set in Ystad?
+                </div>
+                <div class="row row-idle">Wallander</div>
+                <div class="row row-idle">Bron</div>
+                <div class="row row-idle">Beck</div>
+              </div>
+            </div>
+            <h3>scene-it</h3>
+            <p class="platform">iOS</p>
+            <p class="app-text">
+              Quiz about Swedish TV series with four categories and a personal
+              high score.
+            </p>
+            <ul class="tags">
+              <li>Swift</li>
+              <li>SwiftUI</li>
+              <li>MVVM</li>
+            </ul>
+            <a class="app-link" href="https://github.com/PatNoO"
+              >See the code →</a
+            >
+          </article>
+
+          <article class="app-card">
+            <div class="phone">
+              <div class="screen">
+                <p class="screen-title">munchtruck</p>
+                <p class="screen-sub">3 near you now</p>
+                <div class="row row-map">📍 Map</div>
+                <div class="row row-highlight">Taco Loco · 400 m</div>
+                <div class="row row-idle">Burgerbilen · 1,2 km</div>
+              </div>
+            </div>
+            <h3>munchtruck</h3>
+            <p class="platform">Android</p>
+            <p class="app-text">
+              Finds food trucks in real time on a map with live updated
+              positions.
+            </p>
+            <ul class="tags">
+              <li>Kotlin</li>
+              <li>Compose</li>
+              <li>Firebase</li>
+            </ul>
+            <a class="app-link" href="https://github.com/PatNoO"
+              >See the code →</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section id="lia">
+        <h2>LIA</h2>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Patrik Noordh</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
