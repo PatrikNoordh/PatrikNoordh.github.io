@@ -13,6 +13,12 @@
   --violet-light: #c4b5fd;
   --violet-tint: rgba(168, 85, 247, 0.12);
   --violet-edge: rgba(168, 85, 247, 0.3);
+  --bg-translucent: rgba(11, 16, 32, 0.5);
+  --blue-tint: rgba(109, 139, 255, 0.14);
+  --green: #22c55e;
+  --green-light: #86efac;
+  --green-tint: rgba(34, 197, 94, 0.12);
+  --green-edge: rgba(34, 197, 94, 0.3);
 }
 
 * {
@@ -378,6 +384,82 @@ nav {
 .stack:hover {
   transform: translateY(-6px);
   border-color: var(--violet-edge);
+}
+
+/* ============================================================
+   10. LIA
+   ============================================================ */
+
+.lia-card {
+  background-image: linear-gradient(
+    135deg,
+    var(--blue-tint),
+    var(--violet-tint)
+  );
+  border: 1px solid var(--violet-edge);
+  border-radius: var(--card-radius);
+  padding: 2.25rem;
+  text-align: center;
+}
+
+.lia-card h2 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  line-height: 1.2;
+  margin: 1rem 0 0.8rem;
+}
+
+.lia-card > p {
+  color: var(--dim);
+  max-width: 52ch;
+  margin: 0 auto;
+}
+
+/*---------- status pill -------------*/
+
+.pill-available {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--green-light);
+  background-color: var(--green-tint);
+  border-color: var(--green-edge);
+}
+
+.pill-available::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--green);
+}
+
+/* ---------- the periods ---------- */
+
+.periods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.period {
+  background-color: var(--bg-translucent);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1.5rem;
+  min-width: 190px;
+}
+
+.period dt {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.period dd {
+  color: var(--dim);
+  font-size: 0.85rem;
 }
 
 @media (min-width: 768px) {
