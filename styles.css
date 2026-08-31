@@ -321,6 +321,65 @@ nav {
   color: var(--text);
 }
 
+/* ============================================================
+   9. ABOUT
+   ============================================================ */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.about-grid h2 {
+  font-size: clamps(1.8rem, 4.5vw, 2.4rem);
+  line-height: 1.2;
+  margin: 1rem 0 1.1rem;
+}
+
+.about-grid p {
+  color: var(--dim);
+  margin-bottom: 1rem;
+  max-width: 58ch;
+}
+
+.about-grid b {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.stack li {
+  font-size: 0.82rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem;
+}
+
+.stack:hover {
+  transform: translateY(-6px);
+  border-color: var(--violet-edge);
+}
+
 @media (min-width: 768px) {
   .menu-toggle {
     display: none;
@@ -337,5 +396,12 @@ nav {
 
   .hero {
     padding: 7rem 1.5rem 8rem;
+  }
+}
+
+@media (min-width: 860px) {
+  .about-grid {
+    grid-template-columns: 320px 1fr;
+    gap: 3.5rem;
   }
 }
