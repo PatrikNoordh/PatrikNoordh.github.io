@@ -462,6 +462,54 @@ nav {
   font-size: 0.85rem;
 }
 
+/* ============================================================
+   11. CONTACT
+   ============================================================ */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+}
+
+.contact-card {
+  display: block;
+  height: 100%;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.4rem 1rem;
+  text-align: center;
+  transition:
+    border-color 0.25s,
+    transform 0.25s;
+}
+
+.contact-card:hover {
+  border-color: var(--violet-edge);
+  transform: translateY(-4px);
+}
+
+.contact-icon {
+  font-size: 1.3rem;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-top: 0.6rem;
+}
+
+.contact-value {
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+
+  overflow-wrap: break-word;
+}
+
 @media (min-width: 768px) {
   .menu-toggle {
     display: none;
