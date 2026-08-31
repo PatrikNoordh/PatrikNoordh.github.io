@@ -1,4 +1,3 @@
-
 :root {
   --bg: #0b1020;
   --nav-bg: rgba(11, 16, 32, 0.85);
@@ -9,6 +8,11 @@
   --border: rgba(255, 255, 255, 0.09);
   --max-width: 1080px;
   --radius: 100px;
+  --card: rgba(255, 255, 255, 0.045);
+  --card-radius: 22px;
+  --violet-light: #c4b5fd;
+  --violet-tint: rgba(168, 85, 247, 0.12);
+  --violet-edge: rgba(168, 85, 247, 0.3);
 }
 
 * {
@@ -76,7 +80,7 @@ nav {
 
 .logo {
   font-weight: 700;
-  font-size:1.05rem;
+  font-size: 1.05rem;
 }
 
 .menu-toggle {
@@ -170,7 +174,9 @@ nav {
   border-radius: var(--radius);
   font-weight: 600;
   font-size: 0.95rem;
-  transition: border-color 0.2s, transform 0.2s;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
 }
 
 .btn:hover {
@@ -184,8 +190,138 @@ nav {
   color: #fff;
 }
 
-@media (min-width: 768px) {
+/* ============================================================
+   8. APPS
+   ============================================================ */
 
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+
+  color: var(--viloter-light);
+  background-color: var(--violet-tint);
+  border: 1px solid var(--violet-edge);
+  border-radius: var(--radius);
+  padding: 0.35rem 0.9rem;
+}
+
+.section-header h2 {
+  font-size: clamps(1rem, 5vw, 2.8rem);
+  line-height: 1.2;
+  margin: 1rem 0 0.6rem;
+}
+
+.section-header p {
+  color: var(--dim);
+  max-width: 52ch;
+  margin: 0 auto;
+}
+
+/* ---------- Apps Grid ---------- */
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ---------- App Card ---------- */
+
+.app-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 2rem 1.5rem 1.75rem;
+  text-align: center;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+
+.app-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--violet-edge);
+}
+
+/* ---------- phone frame ---------- */
+
+.phone {
+  width: 178px;
+  margin: 0 auto 1.5rem;
+  aspect-ratio: 9/19.5;
+  border: 8px solid #171c33;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #0b0f1e;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.55);
+}
+
+.phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- card text ---------- */
+
+.app-card h3 {
+  font-size: 1.3rem;
+}
+
+.platform {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--blue);
+  background-color: rgba(109, 139, 255, 0.12);
+  border-radius: 6px;
+  padding: 0.18rem 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.app-text {
+  color: var(--dim);
+  font-size: 0.93rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+.tags li {
+  font-size: 0.72rem;
+  color: #b9bfd6;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.25rem 0.55rem;
+}
+
+.app-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--violet-light);
+  transition: color 0.2s;
+}
+
+.app-link:hover {
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
@@ -203,4 +339,3 @@ nav {
     padding: 7rem 1.5rem 8rem;
   }
 }
-
